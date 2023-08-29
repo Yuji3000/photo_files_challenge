@@ -29,5 +29,10 @@ RSpec.describe 'solution' do
     a.png, Krakow, 2016-02-13 13:33:50
     b.jpg, Krakow, 2016-01-02 15:12:22"
     expect(solution(photos)).to eq("photo information is incomplete")
+   
+    photos = " ,    , 2013-09-06 15:40:22
+    a.png, Krakow, 2016-02-13 13:33:50
+    b.jpg, Krakow, 2016-01-02 15:12:22"
+    expect(solution(photos)).to eq("photo information is incomplete")
   end
 end
