@@ -23,4 +23,11 @@ RSpec.describe 'solution' do
 
     expect(solution(m)).to eq(expected_output)
   end
+
+  it 'will return a error response if the photo info is empty in one or more sections' do
+    photos = "me.jpg,    , 2013-09-06 15:40:22
+    a.png, Krakow, 2016-02-13 13:33:50
+    b.jpg, Krakow, 2016-01-02 15:12:22"
+    expect(solution(photos)).to eq("photo information is incomplete")
+  end
 end
