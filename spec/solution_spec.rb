@@ -3,7 +3,7 @@ require './lib/solution'
 
 RSpec.describe 'solution' do
   it 'returns the correct new names for photos' do
-    m = "photo.jpg, Krakow, 2013-09-05 14:08:15
+    s = "photo.jpg, Krakow, 2013-09-05 14:08:15
     Mike.png, London, 2015-06-20 15:13:22
     myFriends.png, Krakow, 2013-09-05 14:07:13
     Eiffel.jpg, Florianopolis, 2015-07-23 08:03:02
@@ -21,7 +21,7 @@ RSpec.describe 'solution' do
 
     expected_output = "Krakow02.jpg\nLondon1.png\nKrakow01.png\nFlorianopolis2.jpg\nFlorianopolis1.jpg\nLondon2.jpg\nFlorianopolis3.png\nKrakow03.jpg\nKrakow09.png\nKrakow07.jpg\nKrakow06.jpg\nKrakow08.jpg\nKrakow04.png\nKrakow05.png\nKrakow10.jpg"
 
-    expect(solution(m)).to eq(expected_output)
+    expect(solution(s)).to eq(expected_output)
   end
 
   it 'will return a error response if the photo info is empty in one or more sections' do

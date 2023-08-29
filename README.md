@@ -1,4 +1,5 @@
 # photo_files_challenge
+
 Mike is an avid traveler. He has visited a lot of cities over many years.
 Whenever he visits a city, he takes a few photos and saves them on his
 computer. Each photo has a name with an extension ("jpg", "png' or "jpeg")

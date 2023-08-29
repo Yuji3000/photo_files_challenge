@@ -1,5 +1,5 @@
-def split_input(m)
-  m.split("\n").map do |line|
+def split_input(s)
+  s.split("\n").map do |line|
     line.split(", ")
   end
 end
