@@ -60,6 +60,6 @@ def solution(s)
     photo_name = photo.split(",")[0]
     photo_name
   end
-
+  
   final_name_array.join("\n")
 end
