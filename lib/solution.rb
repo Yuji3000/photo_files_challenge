@@ -33,18 +33,8 @@ def set_new_names(city_hash)
   return names_array
 end
 
-def add_position(names_array)
-  photo_names_w_position = []
-  names_array.each do |name|
-    photo_name, position = name
-    photo_names_w_position << name
-  end
-  return photo_names_w_position
-end
-
-
-def solution(m)
-  photo_array = split_input(m)
+def solution(s)
+  photo_array = split_input(s)
 
   city_hash = Hash.new { |hash, key| hash[key] = [] }
   
@@ -59,15 +49,14 @@ def solution(m)
   end
 
   sort_by_datetime(city_hash)
-  names_array = set_new_names(city_hash)
-  photo_names_w_position = add_position(names_array)
+  final_name_photos = set_new_names(city_hash)
 
-  sorted_array = photo_names_w_position.sort_by! do |element|
+  organized_photos = final_name_photos.sort_by do |element|
     number = element.split(",")[1].to_i
     number
   end
 
-  final_name_array = sorted_array.map do |photo|
+  final_name_array = organized_photos.map do |photo|
     photo_name = photo.split(",")[0]
     photo_name
   end
